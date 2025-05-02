@@ -63,3 +63,91 @@ body {
 .nav-links a.active {
   color: var(--primary-color);
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+  display: flex;
+  align-items: center;
+  padding: 6rem 2rem 2rem 2rem;
+}
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: var(--white);
+}
+.highlight {
+  background: linear-gradient(45deg, #00D1FF, #FF3366);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  animation: gradientFlow 3s ease infinite;
+  background-size: 200% 200%;
+}
+@keyframes gradientFlow {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, #00D1FF, #FF3366);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  color: var(--text-color-light);
+  margin-bottom: 1.5rem;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color-light);
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
