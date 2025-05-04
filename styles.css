@@ -287,5 +287,63 @@ body {
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 209, 255, 0.1);
 }
+.works {
+  padding: 5rem 2rem;
+  background-color: var(--bg-light);
+}
 
+.works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
 
+.work-card {
+  background: var(--bg-dark);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 209, 255, 0.1);
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+}
+
+.work-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.work-info {
+  padding: 2rem;
+}
+
+.work-info h3 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.work-info p {
+  color: var(--text-color-light);
+  margin-bottom: 1.5rem;
+}
+
+.work-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.work-tags span {
+  background: rgba(0, 209, 255, 0.1);
+  color: var(--primary-color);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
